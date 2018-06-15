@@ -183,7 +183,7 @@ static void SystemClock_Config(void)
 static void Error_Handler(void)
 {
   /* User may add here some code to deal with this error */
-	__disable_irq();
+	vTaskSuspendAll();
   while(1)
   {
 	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_7);

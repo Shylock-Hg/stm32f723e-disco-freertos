@@ -15,5 +15,8 @@ void TaskBlink(void * args){
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
 		vTaskDelay(pdMS_TO_TICKS(1000));
 	}
+
+	//< don't reach
+	vTaskDelete(NULL);
 }
 
