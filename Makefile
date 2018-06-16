@@ -78,7 +78,18 @@ Middlewares/FreeRTOS/Source/list.c \
 Middlewares/FreeRTOS/Source/queue.c \
 Middlewares/FreeRTOS/Source/stream_buffer.c \
 Middlewares/FreeRTOS/Source/tasks.c \
-Middlewares/FreeRTOS/Source/timers.c
+Middlewares/FreeRTOS/Source/timers.c \
+Drivers/BSP/STM32F723E-Discovery/stm32f723e_discovery_lcd.c \
+Drivers/BSP/STM32F723E-Discovery/stm32f723e_discovery_ts.c \
+Drivers/BSP/Components/ft6x06/ft6x06.c \
+Drivers/BSP/Components/st7789h2/st7789h2.c \
+Utilities/Fonts/font8.c \
+Utilities/Fonts/font12.c \
+Utilities/Fonts/font16.c \
+Utilities/Fonts/font20.c \
+Utilities/Fonts/font24.c
+
+
 
 # ASM sources
 ASM_SOURCES =  \
@@ -141,7 +152,12 @@ C_INCLUDES =  \
 -IDrivers/CMSIS/Device/ST/STM32F7xx/Include \
 -IDrivers/CMSIS/Include \
 -IMiddlewares/FreeRTOS/Port \
--IMiddlewares/FreeRTOS/Source/include
+-IMiddlewares/FreeRTOS/Source/include \
+-IDrivers/BSP/Components/st7789h2 \
+-IDrivers/BSP/Components/ft6x06 \
+-IDrivers/BSP/STM32F723E-Discovery \
+-IUtilities/Fonts \
+-IDrivers/BSP/Components/Common
 
 
 # compile gcc flags
