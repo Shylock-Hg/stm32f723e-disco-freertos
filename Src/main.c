@@ -102,6 +102,8 @@ int main(void)
   GPIO_InitStruct.Pin = GPIO_PIN_7;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  //assert_param(false);
+
   //< initialize blink task
   if( pdPASS != xTaskCreate(TaskBlink, "blink", 127, NULL, 2, NULL) ){
   	Error_Handler();
